@@ -6,4 +6,12 @@
   .resourceCell {
     @apply text-2xl md:text-3xl font-medium bg-main-100 grid place-items-center md:hover:bg-main-300 md:hover:text-bg transition-all  px-4 py-1 rounded-md text-center underline;
   }
+
+  .headerItem {
+    @apply font-medium text-xl text-bg hover:text-acc transition-colors;
+  }
+
+  .headerItemGroup {
+    @apply headerItem group-hover:text-acc;
+  }
 }
