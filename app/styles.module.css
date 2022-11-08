@@ -1,0 +1,46 @@
+.bgImage {
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    background-size: 100% auto;
+    backgroundPosition: center;
+    justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+    .bgImage {
+        display: flex;
+        flex-direction: column;
+        height: 450px;
+        background-size: auto 100%;
+        backgroundPosition: center;
+        justify-content: flex-end;
+    }
+    .bgImage:hover {
+        display: flex;
+        flex-direction: column;
+        height: 450px;
+        background-size: auto 105%;
+        backgroundPosition: center;
+        justify-content: flex-end;
+    }
+} 
+
+.img1 {
+    background-image: url("/images/pmp.png");
+}
+.img2 {
+    background-image: url("/images/pmiacp.png");
+}
+.img3 {
+    background-image: url("/images/capm.png");
+}
+.img4 {
+    background-image: url("/images/ccpm.png");
+}
+.img5 {
+    background-image: url("/images/pdu.png");
+}
+.img6 {
+    background-image: url("/images/contact.png");
+}

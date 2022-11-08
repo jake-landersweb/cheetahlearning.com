@@ -65,7 +65,7 @@ export default function Header({ children }: { children: React.ReactNode }) {
                         <HoverMenu props={{
                             title: "Courses",
                             type: HoverMenuType.header,
-                            content: <div className="p-4">
+                            content: <div className="p-4 space-y-4">
                                 {headerLink("CCPM – CHEETAH CERTIFIED PROJECT MANAGER", "#")}
                                 <div className="space-y-2">
                                     {headerLink("PMP EXAM PREP", "#")}
@@ -143,7 +143,7 @@ export default function Header({ children }: { children: React.ReactNode }) {
                         }} />
                         <Link props={{
                             href: "/",
-                            child: <h3>About</h3>,
+                            child: <h3>Blog</h3>,
                             isExternal: false,
                             className: "headerItem"
                         }} />
