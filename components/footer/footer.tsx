@@ -37,12 +37,12 @@ export default function Footer() {
         <div className="bg-acc-700 p-8 text-gray-400">
             <BoundsWrapper>
                 <div className="text-sm space-y-4">
-                    <p>" "PMP", "CAPM" and the PMP and CAPM logos are certification marks of the Project Management Institute which are registered in the United States and other nations. The PMBOK® Guide - 6th Edition is a registered trademark of the Project Management Institute. CHEETAH LEARNING® provides both CAPM and PMP Exam preparation and continuing education for Project Managers." </p>
+                    <p>&quot; &quot;PMP&quot;, &quot;CAPM&quot; and the PMP and CAPM logos are certification marks of the Project Management Institute which are registered in the United States and other nations. The PMBOK® Guide - 6th Edition is a registered trademark of the Project Management Institute. CHEETAH LEARNING® provides both CAPM and PMP Exam preparation and continuing education for Project Managers.&quot;</p>
                     <div className="grid place-items-center text-small">
                         <p>*Audit Information from internal report using this method:</p>
                         <ul className='list-decimal font-semibold'>
                             <li>Students report exam results to Cheetah Learning</li>
-                            <li>Student's Cheetah instructor verifies their status with PMI</li>
+                            <li>Student&apos;s Cheetah instructor verifies their status with PMI</li>
                             <li>Exam results are marked in our system </li>
                         </ul>
                     </div>

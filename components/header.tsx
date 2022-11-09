@@ -19,7 +19,7 @@ export default function Header({ children }: { children: React.ReactNode }) {
 
     const menuItems = (className: string) => {
         return [
-            <div className={className}>
+            <div key="1" className={className}>
                 {headerLink("CCPM – CHEETAH CERTIFIED PROJECT MANAGER", "https://www.cheetahlearning.com/wp/ccpm-cheetah-certified-project-manager/")}
                 <div className="md:space-y-2">
                     {headerLink("PMP EXAM PREP", "https://www.cheetahlearning.com/wp/pmp-overview/")}
@@ -42,7 +42,7 @@ export default function Header({ children }: { children: React.ReactNode }) {
                     {headerLinkSmall('Top Ten PDU Courses - Be More than "Just" a PMP - be a Cheetah', "https://www.cheetahlearning.com/wp/top-ten-pdu-classes/")}
                 </div>
             </div>,
-            <div className={className}>
+            <div key="2" className={className}>
                 <div className="md:space-y-2 md:p-4">
                     {headerLinkSmall("Cheetah Leadership Program", "https://www.cheetahlearning.com/wp/cheetah-leadership-program/")}
                     {headerLinkSmall("Introduction to Cheetah Project Management - For Your Team, Group, or Organization", "https://www.cheetahlearning.com/wp/intropm/")}
@@ -62,7 +62,7 @@ export default function Header({ children }: { children: React.ReactNode }) {
                     <p className="text-bg">To View all of our courses, visit the <a href="https://www.cheetahlearning.com/wp/professional-development-units-pdu-courses/" target="_blank" rel="noopener noreferrer" className="text-main md:hover:opacity-50 transition-all">Course Catalog Page. &rarr;</a></p>
                 </div>
             </div>,
-            <div className="">
+            <div key="3" className="">
                 <div className="md:space-y-2 md:p-4">
                     {headerLinkSmall("Corporate Discounts", "https://www.cheetahlearning.com/wp/furtherfaster/")}
                     {headerLinkSmall("Group Discounts", "https://www.cheetahlearning.com/wp/furtherfaster/")}
@@ -72,7 +72,7 @@ export default function Header({ children }: { children: React.ReactNode }) {
                     <p className="text-bg">Call (844)800-4PMP to make an appointment today to find out more about these, and other group training options offered by Cheetah.</p>
                 </div>
             </div>,
-            <div className="">
+            <div key="4" className="">
                 <div className="md:space-y-2 md:p-4">
                     {headerLinkSmall("What is a PMP®", "https://www.cheetahlearning.com/wp/becoming-a-pmp/")}
                     {headerLinkSmall("The Cheetah Difference", "https://www.cheetahlearning.com/wp/about/")}

@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  cheetah:
+    container_name: cheetah
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 3008:3000
+    volumes:
+      - .:/cheetah
