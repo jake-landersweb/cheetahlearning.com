@@ -138,7 +138,7 @@ export default function Header({ children }: { children: React.ReactNode }) {
             }} />
         </div>
     }
-    return <div className="">
+    return <header className="">
         <div className="fixed top-0 z-50">
             {/* <div className="bg-acc-400 h-[50px] w-screen flex items-center justify-between px-4 md:px-8">
                 <p className="text-bg text-xl font-medium">844-800-4767</p>
@@ -265,5 +265,5 @@ export default function Header({ children }: { children: React.ReactNode }) {
                 {children}
             </div>
         </div>
-    </div>
+    </header>
 }
