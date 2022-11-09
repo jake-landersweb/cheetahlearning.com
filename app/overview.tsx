@@ -7,15 +7,15 @@ export default function Overview() {
         return <div className="bg-stone-100 space-y-2 overflow-clip rounded-md flex flex-col justify-between border border-gray-300">
             <div className="space-y-4">
                 <img src={src} alt={alt} className="w-full" />
-                <h4 className="text-2xl font-semibold text-center px-4">{title}</h4>
+                <h4 className="text-2xl font-semibold text-center px-4 tracking-tight">{title}</h4>
             </div>
-            <p className="font-medium md:text-xl text-center my-auto px-4">{desc}</p>
+            <p className="font-medium text-center my-auto px-4">{desc}</p>
             <div className="p-4 space-y-4">
                 <div className="">
-                    <a href={link}><p className="bg-acc-200 w-full py-4 rounded-md md:hover:bg-acc transition-all text-bg text-center text-lg font-bold">{linkTitle}</p></a>
+                    <a href={link}><p className="bg-acc-200 w-full py-2 md:py-4 rounded-md md:hover:bg-acc transition-all text-bg text-center md:text-lg font-bold">{linkTitle}</p></a>
                 </div>
                 <div className="">
-                    <a href="https://registration.cheetahlearning.com/rs/courselist1.asp?group_id=364-PMPACVirt&_ga=2.227661405.1131494294.1667843884-1828884416.1667589368"><p className="bg-main w-full py-4 rounded-md md:hover:opacity-50 transition-all text-bg text-center text-lg font-bold">VIEW COURSES</p></a>
+                    <a href="https://registration.cheetahlearning.com/rs/courselist1.asp?group_id=364-PMPACVirt&_ga=2.227661405.1131494294.1667843884-1828884416.1667589368"><p className="bg-main w-full py-2 md:py-4 rounded-md md:hover:opacity-50 transition-all text-bg text-center md:text-lg font-bold">VIEW COURSES</p></a>
                 </div>
             </div>
         </div>

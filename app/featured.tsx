@@ -5,7 +5,7 @@ export default function Featured() {
     const cell = (title: string, desc: string, link: string, img: string, isLearnMore: boolean = true) => {
         return <div className={`${styles.bgImage} ${img} overflow-clip rounded-md transition-all border border-gray-300`}>
             <div className="bg-white bg-opacity-80 space-y-4 text-center p-4">
-                <h4 className="text-xl font-semibold">{title}</h4>
+                <h4 className="text-xl font-semibold tracking-tight">{title}</h4>
                 <p className="text-gray-600">{desc} <a href={link} className="text-main md:hover:opacity-50 transition-all">{isLearnMore ? "Learn More" : "Contact us today."}</a></p>
             </div>
         </div>

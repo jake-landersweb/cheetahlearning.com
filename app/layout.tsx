@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react"
+import Footer from "../components/footer/footer";
 import Header from "../components/header";
 import "../styles/globals.css";
 
@@ -7,7 +8,7 @@ const Root = ({ children }: { children: React.ReactNode }) => {
     return (
         <html style={{ "scrollPaddingTop": "60px" }} lang="en" className="scroll-smooth text-txt bg-bg">
             <head>
-                <title>Cheetah Learning - Welcome</title>
+                <title>Cheetah Learning - PMP Training</title>
                 <meta charSet="UTF-8" />
                 <meta
                     name="viewport"
@@ -35,7 +36,7 @@ const Root = ({ children }: { children: React.ReactNode }) => {
                         {children}
                     </Header>
                     <div className="">
-                        {/* <Footer /> */}
+                        <Footer />
                     </div>
                 </div>
             </body>

@@ -9,29 +9,47 @@ export default function ClassView({ classes }: { classes: CheetahClass[] }) {
     const [selected, setSelected] = useState(0)
 
     const selectionCell = (title: string, index: number) => {
-        return <button onClick={() => setSelected(index)}>
-            <p className={`${selected == index ? "bg-main md:hover:bg-main-300" : "bg-acc md:hover:bg-acc-400"} text-white p-4 transition-all font-medium text-lg`}>{title}</p>
+        return <button className={`${selected == index ? "bg-main md:hover:bg-main-300" : "bg-acc md:hover:bg-acc-400"} text-white p-4 transition-all font-medium text-lg`} onClick={() => setSelected(index)}>
+            <p>{title}</p>
         </button>
+    }
+
+    // takes the date range given by the data and returns the 
+    // date that the class begins on
+    const getClsDate = (cls: CheetahClass) => {
+        const temp1 = cls.date[0].split(",")
+        const temp2 = temp1[0].split("-")
+        return new Date(temp2[0] + "," + temp1[1])
+    }
+
+    const sortedClasses = () => {
+        classes.sort((a, b) => {
+            const d1 = getClsDate(a)
+            const d2 = getClsDate(b)
+            return d1.getTime() == d2.getTime() ? 0 : d1.getTime() > d2.getTime() ? 1 : -1
+        })
+        return classes
     }
 
     const getClasses = () => {
         const cells = []
+        const cls = sortedClasses()
         if (selected == 0) {
-            for (var i = 0; i < classes.length; i++) {
-                cells.push(<ClassCell cc={classes[i]} />)
+            for (var i = 0; i < cls.length; i++) {
+                cells.push(<ClassCell cc={cls[i]} />)
             }
         } else if (selected == 1) {
-            for (var i = 0; i < classes.length; i++) {
+            for (var i = 0; i < cls.length; i++) {
                 const idx = i
-                if (classes[idx].virtual[0] == "0") {
-                    cells.push(<ClassCell cc={classes[i]} />)
+                if (cls[idx].virtual[0] == "0") {
+                    cells.push(<ClassCell cc={cls[i]} />)
                 }
             }
         } else {
-            for (var i = 0; i < classes.length; i++) {
+            for (var i = 0; i < cls.length; i++) {
                 const idx = i
-                if (classes[idx].virtual[0] == "1") {
-                    cells.push(<ClassCell cc={classes[i]} />)
+                if (cls[idx].virtual[0] == "1") {
+                    cells.push(<ClassCell cc={cls[i]} />)
                 }
             }
         }

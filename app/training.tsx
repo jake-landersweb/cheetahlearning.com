@@ -4,9 +4,9 @@ export default function Training() {
         return <div className="space-y-2">
             <div className="">
                 <p className="text-xl font-bold">{title1}</p>
-                <h4 className="text-main text-4xl font-bold">{title2}</h4>
+                <h4 className="text-main text-3xl md:text-4xl font-bold tracking-tight">{title2}</h4>
             </div>
-            <p className="font-medium">{desc}</p>
+            <p className="font-medium text-gray-500">{desc}</p>
         </div>
     }
 
