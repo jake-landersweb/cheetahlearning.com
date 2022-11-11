@@ -1,4 +1,4 @@
-import styles from './styles.module.css';
+import styles from './features.module.css';
 
 export default function Featured() {
 

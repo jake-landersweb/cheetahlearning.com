@@ -5,6 +5,7 @@ import BoundsWrapper from "./boundsWrapper";
 import HoverMenu from "./hoverMenu/hoverMenu";
 import HoverMenuType from "./hoverMenu/hoverMenuType";
 import Link from "./link";
+import Resources from "./resources";
 
 export default function Header({ children }: { children: React.ReactNode }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -101,22 +102,6 @@ export default function Header({ children }: { children: React.ReactNode }) {
         </div>
     }
 
-    const featuredCell = (src: string, alt: string, title: string, desc: string, link: string) => {
-        return <div className="bg-stone-100 space-y-2 overflow-clip rounded-md flex flex-col justify-between border border-gray-300">
-            <div className="space-y-4">
-                <img src={src} alt={alt} className="w-full" />
-                <h4 className="text-2xl font-semibold text-center px-4 tracking-tight">{title}</h4>
-            </div>
-            <p className="font-medium text-center px-4">{desc}</p>
-            <Link props={{
-                href: link,
-                child: <>Learn More &rarr;</>,
-                isExternal: true,
-                className: "bg-acc-200 w-full py-2 md:py-4 md:hover:bg-acc transition-all text-bg text-center md:text-lg font-medium"
-            }} />
-        </div>
-    }
-
     const headerLink = (title: string, href: string, isExternal: boolean = true) => {
         return <div className="">
             <Link props={{
@@ -203,20 +188,9 @@ export default function Header({ children }: { children: React.ReactNode }) {
             </div>
         </div>
         <div className="my-[50px] flex flex-col">
-            <BoundsWrapper>
-                <div className="mt-4">
-                    <div className="text-center grid place-items-center">
-                        <h2 className="font-bold text-2xl md:text-3xl tracking-tight">Featured Cheetah Resources</h2>
-                        <p className="text-gray-500">Free Cheetah resources to get you started on your PMP certification journey.</p>
-                    </div>
-                    <div className="grid place-items-center">
-                        <div className="relative p-4 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 max-w-[1000px]">
-                            {featuredCell("/images/pmp-questions.png", "PMP Practice Questions", "Free PMP Practice Questions", "Do this quick free timed 30 minute baseline exam PMP Practice Test and see if you have what it takes to pass the PMP Exam.", "https://cheetahlearning.ac-page.com/spot-on-pmp-practice-questions")}
-                            {featuredCell("/images/goldstandard.png", "Webinar", "Five Quick Steps to Become PMP Certified", "One Hour Webinar to Enable you to Achieve Your Goals 5x Faster, including passing the PMP exam Cheetah FAST", "https://cheetahlearning.easywebinar.live/registration-22")}
-                        </div>
-                    </div>
-                </div>
-            </BoundsWrapper>
+            <div className="hidden md:block">
+                <Resources />
+            </div>
             <div className="hidden md:block sticky inset-x-0 top-[50px] left-0 bg-main w-screen py-4 z-40">
                 <BoundsWrapper>
                     <div className="flex space-x-4 justify-around">
