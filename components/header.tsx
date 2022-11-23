@@ -2,13 +2,17 @@
 
 import { useState } from "react";
 import BoundsWrapper from "./boundsWrapper";
+import Field from "./field";
 import HoverMenu from "./hoverMenu/hoverMenu";
 import HoverMenuType from "./hoverMenu/hoverMenuType";
+import Image from "./image";
 import Link from "./link";
 import Resources from "./resources";
 
 export default function Header({ children }: { children: React.ReactNode }) {
     const [isOpen, setIsOpen] = useState(false);
+    const [username, setUsername] = useState("");
+    const [pass, setPass] = useState("");
 
     const handleClick = () => {
         setIsOpen(!isOpen);
@@ -136,13 +140,39 @@ export default function Header({ children }: { children: React.ReactNode }) {
             </div> */}
             <div className={`bg-acc backdrop-blur-sm h-[50px] items-center w-screen grid place-items-center transition-all duration-300 fixed top-0 left-0`}>
                 <div className="flex items-center justify-between max-w-[2000px] w-full px-2 lg:px-20 md:px-10">
-                    <p className="text-bg text-xl font-medium">844-800-4767</p>
-                    <Link props={{
-                        href: "https://registration.cheetahlearning.com/ASPNET/Login.aspx?Username=&Password=",
-                        child: <>Login</>,
-                        isExternal: true,
-                        className: "hidden md:block text-bg md:hover:text-main transition-all",
+                    {/* <p className="text-bg text-xl font-medium">844-800-4767</p> */}
+                    <Image props={{
+                        src: "/images/cheetah-white-t.png",
+                        alt: "Cheetah Logo",
+                        divClass: undefined,
+                        imgClass: "h-[45px]"
                     }} />
+                    <div className="space-x-2 items-center hidden md:flex">
+                        <Field props={{
+                            value: username,
+                            label: "Username",
+                            onChanged: (val: string) => setUsername(val),
+                            showLabelText: false,
+                            isTextArea: false,
+                            inputType: "email",
+                            className: "h-[40px]"
+                        }} />
+                        <Field props={{
+                            value: pass,
+                            label: "Password",
+                            onChanged: (val: string) => setPass(val),
+                            showLabelText: false,
+                            isTextArea: false,
+                            inputType: "password",
+                            className: "h-[40px]"
+                        }} />
+                        <Link props={{
+                            href: `https://registration.cheetahlearning.com/ASPNET/Login.aspx?Username=${username}&Password=${pass}`,
+                            child: <>Login</>,
+                            isExternal: true,
+                            className: "text-bg bg-main px-4 h-[40px] rounded-md transition-all grid place-items-center hover:opacity-50",
+                        }} />
+                    </div>
                     {/* Mobile menu */}
                     {isOpen ? (
                         <button onClick={handleClick} className={`md:hidden text-gray-400 w-10 h-10 focus:outline-none fixed right-2 z-50`}>
