@@ -218,9 +218,6 @@ export default function Header({ children }: { children: React.ReactNode }) {
             </div>
         </div>
         <div className="my-[50px] flex flex-col">
-            <div className="hidden md:block">
-                <Resources />
-            </div>
             <div className="hidden md:block sticky inset-x-0 top-[50px] left-0 bg-main w-screen py-4 z-40">
                 <BoundsWrapper>
                     <div className="flex space-x-4 justify-around">
