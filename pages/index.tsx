@@ -10,6 +10,8 @@ import Training from "../components/training"
 import Featured from "../components/featured/features"
 import { GetServerSideProps, InferGetServerSidePropsType } from "next"
 import Resources from "../components/resources"
+import Field from "../components/field"
+import TrustPilot from "../components/trustPilot"
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
 
@@ -31,7 +33,10 @@ export default function Index({ classData }: InferGetServerSidePropsType<typeof 
                     <p>Go From 0 to PMP <span className="italic">Cheetah Fast</span></p>
                     <p className="text-lg text-center max-w-2xl pt-4 font-normal text-gray-500">Start class on Monday and become PMP certified by Friday. Over 20 years of Accelerated Learning experience and a 98% pass rate on the PMP exam*</p>
                 </div>
-                <ClassView classes={JSON.parse(classData)['classes']['class']} />
+                <div className="lg:flex lg:flex-row-reverse">
+                    <ClassView classes={JSON.parse(classData)['classes']['class']} />
+                    <TrustPilot />
+                </div>
                 <div className="">
                     <Resources />
                 </div>
