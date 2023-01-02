@@ -41,14 +41,14 @@ export default function ClassView({ classes }: { classes: CheetahClass[] }) {
         } else if (selected == 1) {
             for (var i = 0; i < cls.length; i++) {
                 const idx = i
-                if (cls[idx].virtual[0] == "0") {
+                if (cls[idx].virtual[0] == "1") {
                     cells.push(<ClassCell cc={cls[i]} />)
                 }
             }
         } else {
             for (var i = 0; i < cls.length; i++) {
                 const idx = i
-                if (cls[idx].virtual[0] == "1") {
+                if (cls[idx].virtual[0] == "0") {
                     cells.push(<ClassCell cc={cls[i]} />)
                 }
             }
